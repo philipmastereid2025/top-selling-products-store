@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaCart | Top Selling Products</title>
+    <meta
+      name="description"
+      content="Shop trending best-selling products across electronics, home, beauty, fitness, and lifestyle."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <div class="brand-block">
+            <div class="brand-mark">N</div>
+            <div>
+              <p class="brand-name">NovaCart</p>
+            </div>
+          </div>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#deals">Deals</a>
+            <a href="#reviews">Reviews</a>
+          </nav>
+
+          <div class="header-actions">
+            <button class="icon-button" aria-label="Search products">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.88 12.8l4.4 4.4 1.4-1.4-4.4-4.4A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 104.5 9.5A5.5 5.5 0 0010.5 5z"/></svg>
+            </button>
+            <button class="cart-button" id="cartToggle" aria-label="Shopping cart">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 110 4 2 2 0 010-4zm10 0a2 2 0 110 4 2 2 0 010-4zM6.2 6h15.1l-1.7 7.1A2 2 0 0117.7 15H9.2a2 2 0 01-1.9-1.5L5.1 3H2V1h4l.6 3.2L7.5 13H17v2H7.1l.3-1.6L6.2 6zm0 0L5.3 4H3V2h3l.5 3z"/></svg>
+              <span>Cart</span>
+              <span class="cart-count" id="cartCount">0</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <div class="eyebrow">Fresh picks • trending now</div>
+              <h1>Smart essentials for everyday living.</h1>
+              <p>
+                Discover high-demand products that blend convenience, performance, and style — curated for modern life.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#shop" class="primary-btn">Shop now</a>
+                <button class="secondary-btn" id="featuredProductBtn">View featured</button>
+              </div>
+
+              <ul class="hero-stats" aria-label="Store statistics">
+                <li><strong>20k+</strong><span>happy shoppers</span></li>
+                <li><strong>4.8/5</strong><span>average rating</span></li>
+                <li><strong>3-day</strong><span>shipping</span></li>
+              </ul>
+            </div>
+
+            <div class="hero-spotlight" aria-label="Featured product spotlight">
+              <div class="spotlight-card">
+                <div class="spotlight-label">Featured</div>
+                <h2>Wireless Earbuds Pro</h2>
+                <p>Active noise cancellation, immersive sound, 40-hour battery life.</p>
+                <div class="spotlight-meta">
+                  <span class="price">$129</span>
+                  <span class="rating">★ 4.7</span>
+                </div>
+                <button class="primary-btn full-width" data-product-id="1">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="promo-strip" id="deals">
+          <div class="container promo-content">
+            <div>
+              <span class="promo-tag">Free shipping</span>
+              <p>On orders over $75</p>
+            </div>
+            <div>
+              <span class="promo-tag">New arrivals</span>
+              <p>Fresh products every week</p>
+            </div>
+            <div>
+              <span class="promo-tag">30-day returns</span>
+              <p>Easy and risk-free</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="catalog" id="shop">
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Curated collection</p>
+                <h2>Top selling products</h2>
+              </div>
+              <div class="catalog-tools">
+                <label class="search-box" aria-label="Search products">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.88 12.8l4.4 4.4 1.4-1.4-4.4-4.4A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 104.5 9.5A5.5 5.5 0 0010.5 5z"/></svg>
+                  <input id="searchInput" type="search" placeholder="Search products" />
+                </label>
+              </div>
+            </div>
+
+            <div class="filters" id="categoryFilters" aria-label="Category filters"></div>
+            <div class="product-grid" id="productGrid"></div>
+          </div>
+        </section>
+
+        <section class="reviews" id="reviews">
+          <div class="container review-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“The quality is better than expected and the shipping was extremely fast.”</p>
+              <div class="reviewer"><strong>Maria T.</strong> <span>Verified buyer</span></div>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“Everything feels premium. The product selection is exactly what I wanted.”</p>
+              <div class="reviewer"><strong>Chris M.</strong> <span>Verified buyer</span></div>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>“An easy shopping experience from browsing to checkout. Highly recommended.”</p>
+              <div class="reviewer"><strong>Priya S.</strong> <span>Verified buyer</span></div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart panel">
+        <div class="cart-header">
+          <h3>Your cart</h3>
+          <button class="close-cart" id="closeCart" aria-label="Close cart">✕</button>
+        </div>
+
+        <div id="cartItems" class="cart-items" aria-live="polite"></div>
+
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="subtotalValue">$0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <strong id="shippingValue">$0.00</strong>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <strong id="totalValue">$0.00</strong>
+          </div>
+          <button id="checkoutBtn" class="primary-btn full-width">Proceed to checkout</button>
+        </div>
+      </aside>
+
+      <div class="overlay hidden" id="overlay"></div>
+
+      <div class="modal hidden" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card">
+          <button class="modal-close" id="closeModal" aria-label="Close product details">✕</button>
+          <div id="modalContent"></div>
+        </div>
+      </div>
+
+      <div class="modal hidden" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <div class="modal-card checkout-card">
+          <button class="modal-close" id="closeCheckout" aria-label="Close checkout modal">✕</button>
+          <div class="checkout-header">
+            <p class="eyebrow">Secure checkout</p>
+            <h3 id="checkoutTitle">Complete your order</h3>
+          </div>
+
+          <form id="checkoutForm">
+            <div class="form-grid">
+              <label>
+                Full name
+                <input type="text" name="name" placeholder="Jane Doe" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="jane@email.com" required />
+              </label>
+              <label class="full-span">
+                Address
+                <input type="text" name="address" placeholder="123 Main Street" required />
+              </label>
+              <label class="full-span">
+                Card details
+                <input type="text" name="card" placeholder="4242 4242 4242 4242" required />
+              </label>
+            </div>
+            <button class="primary-btn full-width" type="submit">Place order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
